@@ -1,20 +1,10 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import re
-from urllib.parse import urlparse, urlunparse, urljoin
-from urllib.request import urlopen, Request
-import os
-from Helper import *
-from Proxy import *
 from pathlib import Path
 from Downloader import *
 from Helper import *
@@ -22,7 +12,6 @@ from Helper import *
 
 class CrawlerMethod:
     def __init__(self, main_urls, file_types, dir_path):
-        # Options "--headless"
         self.file_types = file_types
         self.main_urls = main_urls
         self.dir_path = dir_path + "/"
