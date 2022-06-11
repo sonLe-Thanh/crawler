@@ -1,3 +1,5 @@
+from urllib.parse import urljoin
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
@@ -41,7 +43,7 @@ class CrawlerMethod:
                     req = Request(resolve_url, headers=rotate_proxy())
                     response = urlopen(req)
                     url_content_type = response.info().get_content_type().split("/")[1]
-                    print(url_content_type)
+
                     if url_content_type in equivalent_MIME_type() and equivalent_MIME_type()[
                         url_content_type] in self.file_types:
                         filename = Path(urlparse(resolve_url).path).name

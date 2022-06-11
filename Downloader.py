@@ -1,4 +1,4 @@
-from urllib.request import Request
+from urllib.request import Request, urlopen
 
 from Proxy import *
 from Helper import *

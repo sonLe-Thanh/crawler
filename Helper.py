@@ -1,6 +1,5 @@
 import re
-from urllib.parse import urlparse, urlunparse, urljoin
-from urllib.request import urlopen
+from urllib.parse import urlparse, urlunparse
 
 
 def equivalent_MIME_type():
